@@ -1,0 +1,38 @@
+{
+  "name": "mern-links",
+  "version": "1.0.0",
+  "description": "App with MongoDB, Express, React and NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "MongoDB",
+    "Express",
+    "React",
+    "NodeJS"
+  ],
+  "author": "Aleksej Chuiko <aleksej.chuyko@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.5"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksejchuikoo/MERN-fullstack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aleksejchuikoo/MERN-fullstack/issues"
+  },
+  "homepage": "https://github.com/aleksejchuikoo/MERN-fullstack#readme"
+}
