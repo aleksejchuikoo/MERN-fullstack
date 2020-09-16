@@ -1,0 +1,43 @@
+@import '~materialize-css/dist/css/materialize.min.css';
+
+body {
+  background-color: #f1d4d4;
+}
+
+input.valid[type='email']:not(.browser-default),
+input.valid[type='email']:not(.browser-default):focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+input.valid[type='password']:not(.browser-default),
+input.valid[type='password']:not(.browser-default):focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+input[type='email']:not(.browser-default):focus.valid ~ label {
+  color: #000;
+}
+
+input[type='password']:not(.browser-default):focus.valid ~ label {
+  color: #000;
+}
+
+input[type='email']:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+input[type='password']:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+input[type='email']:not(.browser-default):focus:not([readonly]) + label {
+  color: #000;
+}
+
+input[type='password']:not(.browser-default):focus:not([readonly]) + label {
+  color: #000;
+}

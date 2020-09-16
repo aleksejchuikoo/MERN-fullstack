@@ -3,7 +3,9 @@ const bcrypt = require('bcryptjs');
 const config = require('config');
 const jwt = require('jsonwebtoken');
 const { check, validationResult } = require('express-validator');
+
 const User = require('../models/User');
+
 const router = Router();
 
 // /api/auth/register
@@ -65,7 +67,7 @@ router.post(
 
       const user = await User.findOne({ email }); // если нет такого пользователя по email, то login не можем сделать
       if (!user) {
-        return res.status(400).json({ message: 'Что-то пошло не так, попробуйте снова' });
+        return res.status(400).json({ message: 'Нет такого пользователя' });
       }
 
       const isMatch = await bcrypt.compare(password, user.password); // сравниваем пароли: который пришел с front-end и который в базе
