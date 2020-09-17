@@ -18,6 +18,10 @@ function AuthPage() {
     clearError();
   }, [error, message, clearError]);
 
+  React.useEffect(() => {
+    window.M.updateTextFields(); // делаем активными поля
+  }, []);
+
   const changeHandler = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -50,6 +54,7 @@ function AuthPage() {
                   type="email"
                   className="validate"
                   name="email"
+                  value={form.email}
                   onChange={changeHandler}
                 />
                 <label htmlFor="email">Email</label>
@@ -62,6 +67,7 @@ function AuthPage() {
                   type="password"
                   className="validate"
                   name="password"
+                  value={form.password}
                   onChange={changeHandler}
                 />
                 <label htmlFor="password">Password</label>
